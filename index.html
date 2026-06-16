@@ -22,7 +22,9 @@ revealing the claims before publication.</p>
 <form onsubmit="location.href='verify/'+this.t.value.trim().toUpperCase()+'/';return false">
 <label>Look up a token: <input name="t" placeholder="VI-NO-2026-0001" size="18"></label>
 <input type="submit" value="Verify"></form>
-<p class="muted">No tokens issued yet. The first validated documents will be listed here.</p>
+<table><tr><th>Token</th><th>Badge</th><th>Title</th><th>Owner</th><th>Claims</th><th>Last event</th></tr>
+<tr><td><a href="verify/VI-NO-2026-0001/">VI-NO-2026-0001</a></td><td><span class="badge" style="background:#2e8540">Green</span></td><td>SAMPLE — synthetic demo record (not a real validation)</td><td>demo-owner</td><td>12</td><td>2026-06-16</td></tr></table>
+<p><a href="scorecards/">Verifier scorecards &rarr;</a></p>
 <p class="muted">Spec v0.2. Badge rules are
 mechanical: yellow = AI pass complete and all flagged errors corrected;
 light green = + completed human passes worth &ge;1 credit; green = &ge;2

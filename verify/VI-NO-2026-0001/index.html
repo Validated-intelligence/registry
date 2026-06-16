@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VI-NO-2026-0001 — Validated Intelligence</title>
+<style>body{font-family:Georgia,serif;max-width:44rem;margin:3rem auto;padding:0 1rem;
+     color:#1a1a1a;line-height:1.5}
+h1{font-size:1.5rem} code{background:#f4f4f4;padding:.1rem .3rem;word-break:break-all}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #ccc;padding:.35rem .6rem;text-align:left;font-size:.95rem}
+.badge{display:inline-block;color:#fff;padding:.2rem .7rem;border-radius:1rem;
+       font-family:Helvetica,sans-serif;font-size:.9rem}
+.muted{color:#666;font-size:.9rem}
+input{font-size:1rem;padding:.3rem}</style>
+</head>
+<body>
+<h1>VI-NO-2026-0001</h1>
+<p><span class="badge" style="background:#2e8540">Green</span></p>
+<p><strong>SAMPLE — synthetic demo record (not a real validation)</strong><br>
+Owner: demo-owner &middot; 12 claims</p>
+<p class="muted">Yellow + completed independent human passes worth at least 2 credits (RA = 1, PhD = 2, tenured professor = 5; owner passes never count).</p>
+<h2>Verification sequence</h2>
+<table><tr><th>Event</th><th>Date</th><th>By / badge</th></tr>
+<tr><td>ai_pass</td><td>2026-06-16</td><td>vi-agent</td></tr>
+<tr><td>human_pass</td><td>2026-06-16</td><td>sample-verifier (phd, vi, 2 credits)</td></tr>
+<tr><td>issued</td><td>2026-06-16</td><td>green</td></tr></table>
+<h2>Commitment</h2>
+<p>Merkle root over all claim hashes (SHA-256, spec v0.2):<br>
+<code>587fe883b3bcb2eabb0c7a9d684cf24f46ee04f0ebf8d4dca48cce2320b36bfd</code></p>
+<p class="muted">The claims themselves stay private until the owner publishes them.
+Once published, anyone can recompute the claim hashes and this root and check
+them against the record above. Raw record: <a href="record.json">record.json</a>.
+The git history of the registry repository is the authoritative timestamp.</p>
+<p class="muted"><a href="../../">&larr; all records</a></p>
+</body>
+</html>

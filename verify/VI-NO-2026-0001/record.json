@@ -1,0 +1,29 @@
+{
+  "spec_version": "0.2",
+  "token": "VI-NO-2026-0001",
+  "title": "SAMPLE — synthetic demo record (not a real validation)",
+  "owner": "demo-owner",
+  "merkle_root": "587fe883b3bcb2eabb0c7a9d684cf24f46ee04f0ebf8d4dca48cce2320b36bfd",
+  "claim_count": 12,
+  "badge": "green",
+  "sequence": [
+    {
+      "event": "ai_pass",
+      "date": "2026-06-16",
+      "by": "vi-agent"
+    },
+    {
+      "event": "human_pass",
+      "date": "2026-06-16",
+      "by": "sample-verifier",
+      "role": "phd",
+      "funding": "vi",
+      "credits": 2
+    },
+    {
+      "event": "issued",
+      "date": "2026-06-16",
+      "badge": "green"
+    }
+  ]
+}
