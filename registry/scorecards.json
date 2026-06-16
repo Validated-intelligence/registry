@@ -2,17 +2,17 @@
   "spec_version": "0.2",
   "verifiers": [
     {
-      "verifier": "sample-verifier",
+      "verifier": "ra-1",
       "roles": [
-        "phd"
+        "ra"
       ],
       "projects": 1,
       "completed_passes": 1,
-      "claims_verdicted": 12,
+      "claims_verdicted": 42,
       "honeypot_detection": 1.0,
       "cannot_verify": 0,
-      "minutes": 60.0,
-      "credits_earned": 2.0,
+      "minutes": 73.5,
+      "credits_earned": 1.23,
       "github": null,
       "orcid": null
     }
