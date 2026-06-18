@@ -109,6 +109,7 @@
     .chain-wrap {
       position: relative;
       padding: clamp(24px, 5vw, 54px) 0 clamp(42px, 7vw, 82px);
+      border-top: 1px solid rgba(var(--ink) / .12);
     }
 
     .chain-art {
@@ -159,8 +160,7 @@
     .proof {
       display: grid;
       place-items: center;
-      padding: clamp(30px, 6vw, 72px) 0 clamp(38px, 7vw, 86px);
-      border-top: 1px solid rgba(var(--ink) / .12);
+      padding: clamp(34px, 5vw, 66px) 0 clamp(30px, 5vw, 60px);
     }
 
     .proof-eyebrow {
@@ -331,17 +331,42 @@
       </div>
     </nav>
 
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-stack">
-        <h1 id="hero-title">Validated Intelligence</h1>
-        <div class="side-note" aria-hidden="true">public<br>proof</div>
+    <section class="proof" aria-label="Public registry">
+      <div style="width: min(760px, 100%)">
+        <p class="proof-eyebrow">Public registry</p>
+        <p class="reg-note" style="margin: 0 auto 26px; max-width: 56ch; font-size: 14px; color: rgba(var(--ink) / .68)">
+          Independent, claim-level validation of AI-assisted work. Each record commits to
+          a document's full claims table via a Merkle root — without revealing the claims
+          before publication.</p>
+        <form class="lookup" onsubmit="location.href='verify/'+this.t.value.trim().toUpperCase()+'/';return false">
+          <input type="text" name="t" placeholder="VI-NO-2026-0001" aria-label="Look up a validation token">
+          <button class="button" type="submit">Verify a token</button>
+        </form>
+        <table class="records">
+          <tr><th>Token</th><th>Public proof</th><th>Title</th><th>Claims</th><th>Last event</th></tr>
+          <tr>
+            <td><a href="verify/VI-NO-2026-0001/"><code>VI-NO-2026-0001</code></a></td>
+            <td><span class="badge"><span class="dot"></span>Green</span></td>
+            <td>SAMPLE — synthetic demo record (not a real validation)</td>
+            <td>12</td>
+            <td>2026-06-16</td>
+          </tr>
+        </table>
+        <div class="reg-links">
+          <a class="button" href="scorecards/">Verifier scorecards →</a>
+          <a class="button" href="https://work.kojai.no/">Get work validated →</a>
+        </div>
+        <p class="reg-note">Badge rules are mechanical: yellow = AI pass complete and all
+          flagged errors corrected; light green = + human passes worth ≥1 credit; green =
+          ≥2 credits (RA = 1, PhD = 2, tenured professor = 5). Honeypot detection ≥ 2/3
+          required for a pass to count; the project owner's own passes never count. Spec v0.2.</p>
       </div>
     </section>
 
     <section class="chain-wrap" aria-label="Network chain illustration">
       <svg class="chain-art" viewBox="0 0 1120 420" role="img" aria-labelledby="chain-title chain-desc">
         <title id="chain-title">Validation chain graphic</title>
-        <desc id="chain-desc">A simple chain of connected circles showing work, claims, review, badge, and verified proof.</desc>
+        <desc id="chain-desc">A chain of connected circles: AI-assisted work, claims, review, and public proof.</desc>
 
         <path class="line" d="M122 252 C 260 94, 404 94, 520 210 S 780 345, 996 154"/>
         <path class="line thin" d="M338 130 C 426 236, 558 288, 692 274"/>
@@ -360,40 +385,9 @@
         <text class="paper-text" x="520" y="197">verified</text>
         <text class="paper-text small" x="520" y="231">proof</text>
         <text x="692" y="274">review</text>
-        <text x="996" y="154">badge</text>
+        <text x="996" y="143">public</text>
+        <text x="996" y="167">proof</text>
       </svg>
-    </section>
-
-    <section class="proof" aria-label="Public registry">
-      <div style="width: min(760px, 100%)">
-        <p class="proof-eyebrow">Public registry</p>
-        <p class="reg-note" style="margin: 0 auto 26px; max-width: 56ch; font-size: 14px; color: rgba(var(--ink) / .68)">
-          Independent, claim-level validation of AI-assisted work. Each record commits to
-          a document's full claims table via a Merkle root — without revealing the claims
-          before publication.</p>
-        <form class="lookup" onsubmit="location.href='verify/'+this.t.value.trim().toUpperCase()+'/';return false">
-          <input type="text" name="t" placeholder="VI-NO-2026-0001" aria-label="Look up a validation token">
-          <button class="button" type="submit">Verify a token</button>
-        </form>
-        <table class="records">
-          <tr><th>Token</th><th>Badge</th><th>Title</th><th>Claims</th><th>Last event</th></tr>
-          <tr>
-            <td><a href="verify/VI-NO-2026-0001/"><code>VI-NO-2026-0001</code></a></td>
-            <td><span class="badge"><span class="dot"></span>Green</span></td>
-            <td>SAMPLE — synthetic demo record (not a real validation)</td>
-            <td>12</td>
-            <td>2026-06-16</td>
-          </tr>
-        </table>
-        <div class="reg-links">
-          <a class="button" href="scorecards/">Verifier scorecards →</a>
-          <a class="button" href="https://work.kojai.no/">Get work validated →</a>
-        </div>
-        <p class="reg-note">Badge rules are mechanical: yellow = AI pass complete and all
-          flagged errors corrected; light green = + human passes worth ≥1 credit; green =
-          ≥2 credits (RA = 1, PhD = 2, tenured professor = 5). Honeypot detection ≥ 2/3
-          required for a pass to count; the project owner's own passes never count. Spec v0.2.</p>
-      </div>
     </section>
 
     <footer>
